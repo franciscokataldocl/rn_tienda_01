@@ -2,6 +2,10 @@
 import Root from './src/index';
 import { ActivityIndicator } from 'react-native';
 import { useFonts } from 'expo-font';
+import { Provider } from 'react-redux';
+import store from './src/store';
+
+
 
 
 
@@ -19,7 +23,9 @@ if(!loaded){
   return <ActivityIndicator/>;
 }
   return (
+    <Provider store={store}>
     <Root/>
+    </Provider>
   );
 }
 

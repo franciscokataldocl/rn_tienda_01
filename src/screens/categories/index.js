@@ -1,12 +1,23 @@
 import React from 'react';
-import {View,Button, FlatList} from 'react-native';
+import {View,FlatList} from 'react-native';
 import {styles} from './styles';
-import { categories } from '../../data/categories';//datos
 import CategoryItem from '../../components/category-item/index';
+import {useSelector, useDispatch} from 'react-redux'
+import { selectCategory } from '../../store/actions/category.action';
+
 
 
 
 const CategoriesScreen = ({navigation}) => {
+
+  const dispatch = useDispatch();
+
+  //categorias
+const categories = useSelector(state => state.category.categories);
+//categoria seleccionada del state
+// const categorySelected = useSelector(state => state.category.selected);
+// const categoryProducts = useSelector(state => state.product.filteredProducts);
+
 
   /*
   En onSelected lo que hacemos es enviar a una ruta con parametros
@@ -20,6 +31,7 @@ const CategoriesScreen = ({navigation}) => {
         con esto, estamos modificando el titulo de la barra de navegacion
   */
 const onSelected = (item)=>{
+  dispatch(selectCategory(item.id))
   navigation.navigate('Products', {
     categoryId: item.id,
     title: item.title
