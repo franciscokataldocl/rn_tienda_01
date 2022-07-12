@@ -6,6 +6,11 @@ container:{
     flex: 1,
     backgroundColor: '#fff',
 
+},
+orderList:{
+    flex:1,
+    marginHorizontal: 20,
+
 }
 
 })

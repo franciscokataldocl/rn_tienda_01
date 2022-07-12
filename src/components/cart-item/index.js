@@ -23,7 +23,7 @@ console.log(item)
         < Ionicons
         name="trash"
         size={22}
-        color={colors.red}/>
+        color={colors.highlight}/>
       </TouchableOpacity>
     </View>
   );

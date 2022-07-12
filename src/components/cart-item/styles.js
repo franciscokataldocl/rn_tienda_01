@@ -4,11 +4,11 @@ import { colors } from '../../constants/themes/colors';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.text,
+    backgroundColor: colors.primary,
     borderRadius: 10,
-    marginVertical: 10,
-    paddingVertical:20,
-    paddingHorizontal: 20,
+    marginVertical: 30,
+    paddingVertical:30,
+    paddingHorizontal: 30,
     shadowColor: colors.shadow,
     shadowOpacity: 0.26,
     shadowOffset: { width: 0, height: 2 },

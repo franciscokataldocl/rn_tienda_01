@@ -25,18 +25,18 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'libre-franklin-bold',
-    fontSize: 18,
-    color: colors.black
+    fontSize: 30,
+    color: colors.primary
   },
   price: {
-    fontFamily: 'libre-franklin-bold',
-    fontSize: 18,
-    color: colors.black
+    fontFamily: 'khula-light',
+    fontSize: 26,
+    color: colors.white
   },
   weight: {
-    fontFamily: 'libre-franklin-bold',
+    fontFamily: 'libre-franklin-medium',
     fontSize: 18,
-    color: colors.gray
+    color: colors.gray2
   },
 
 });

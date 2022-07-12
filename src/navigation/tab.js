@@ -39,7 +39,7 @@ const TabNavigator = () => {
             <Ionicons
               name={focused ? 'home' : 'home-outline'}
               size={22}
-              color={focused ? colors.black : colors.gray}
+              color={focused ? colors.primary : colors.gray1}
             />
           )
         }}
@@ -54,7 +54,7 @@ const TabNavigator = () => {
             <Ionicons
               name={focused ? 'cart' : 'cart-outline'}
               size={22}
-              color={focused ? colors.black : colors.text}
+              color={focused ? colors.primary : colors.gray1}
             />
           )
         }}
@@ -69,7 +69,7 @@ const TabNavigator = () => {
             <Ionicons
               name={focused ? 'file-tray-full' : 'file-tray-full-outline'}
               size={22}
-              color={focused ? colors.black : colors.text}
+              color={focused ? colors.primary : colors.gray1}
             />
           )
         }}

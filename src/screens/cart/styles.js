@@ -9,11 +9,6 @@ container:{
     padding:10,
 
 },
-footer:{
-    borderTopColor: colors.primary,
-    borderTopWidth:1,
-
-},
 cartList:{
     flex: 1,
 
@@ -32,16 +27,19 @@ btnConfirm:{
 btnText:{
    fontSize: 18,
    fontFamily: 'libre-franklin-bold',
+   color: colors.primary,
 },
 totalTitle:{
     fontSize: 14,
    fontFamily: 'libre-franklin-bold',
+   color: colors.white,
    
 
 },
 total:{
     fontSize: 40,
    fontFamily: 'khula-light',
+   color: colors.white,
 
 },
 totalContainer:{

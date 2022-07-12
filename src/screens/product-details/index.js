@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 import { colors } from '../../constants/themes/colors';
 
@@ -16,16 +16,25 @@ const ProductDetailScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>id: {product.id}</Text>
-      <Text>nombre: {product.title}</Text>
-      <Text>descripcion: {product.description}</Text>
-      <Text>peso: {product.weight}</Text>
-      <Text>precio: {product.price}</Text>
-      <Button
+     <View style={styles.card}>
+     <Text style={styles.title}>{product.title}</Text>
+     <View style={styles.detailContainer}>
+     <Text style={styles.description}>descripcion: {product.description}</Text>
+      {/* <Text style={styles.weight}>peso: {product.weight}</Text> */}
+      <Text style={styles.price}>precio: {product.price}</Text>
+     </View>
+      {/* <Button
+      style={styles.btnRounded}
         color={colors.primary}
-        title='Add to cart'
-        onPress={() => handleAddToCart()}
-      />
+        title='COMPRAR'
+        
+      /> */}
+      <TouchableOpacity 
+      style={styles.btnRounded} 
+      onPress={() => handleAddToCart()}>
+        <Text style={styles.btnRoundedText}>COMPRAR</Text>
+      </TouchableOpacity>
+     </View>
     </View>
   );
 };

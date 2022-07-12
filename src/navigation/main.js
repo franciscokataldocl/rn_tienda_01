@@ -15,9 +15,9 @@ const MainNavigator = () => {
 
       screenOptions={{
         headerStyle: {
-          backgroundColor: isIOS ? colors.secondary : colors.primary,
+          backgroundColor: isIOS ? colors.secondary : colors.secondary,
         },
-        headerTintColor:colors.black,
+        headerTintColor:colors.white,
         headerTitleStyle:{
           fontFamily: 'libre-franklin-bold',
           fontWeight: 'bold',

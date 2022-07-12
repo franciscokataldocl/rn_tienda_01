@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   containerTouchable: {
     flex: 1,
     height: 180,
-    backgroundColor: '#241f1a7d',
+    backgroundColor: colors.secondaryOpacity,
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
     paddingTop: 10,
@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'libre-franklin-bold',
-    fontSize: 18,
+    fontSize: 30,
     color: colors.white
   },
   image:{
