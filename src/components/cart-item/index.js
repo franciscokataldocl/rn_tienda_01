@@ -7,10 +7,11 @@ import { colors } from '../../constants/themes/colors';
 
 
 const CartItem = ({ item, onDelete }) => {
+console.log(item)
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Text style={styles.title}>{item.name}</Text>
+        <Text style={styles.title}>{item.name} {item.title}</Text>
       </View>
       <View style={styles.containerDetail}>
         <Text style={styles.quantity}>Cantidad: {item.quantity}</Text>
