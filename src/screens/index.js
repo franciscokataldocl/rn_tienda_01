@@ -3,3 +3,4 @@ export { default as ProductScreen } from '../screens/products';
 export { default as ProductDetailScreen } from '../screens/product-details';
 export { default as OrdersScreen} from '../screens/orders';
 export {default as CartScreen} from '../screens/cart';
+export {default as AuthScreen} from '../screens/auth';

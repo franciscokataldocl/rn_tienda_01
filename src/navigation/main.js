@@ -12,7 +12,6 @@ const MainNavigator = () => {
     return (
       <Stack.Navigator 
       initialRouteName='Categories'
-
       screenOptions={{
         headerStyle: {
           backgroundColor: isIOS ? colors.secondary : colors.secondary,

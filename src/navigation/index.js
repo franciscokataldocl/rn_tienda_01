@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigator from './tab';
+import AuthNavigator from './auth';
 
 
 const AppNavigator= () => {
+
+  const [user, setUser] = useState(null)
+
   return (
     
     <NavigationContainer>
-        <TabNavigator/>
+        {user ? (<TabNavigator/>) : (<AuthNavigator/>)}
     </NavigationContainer>
     
   )

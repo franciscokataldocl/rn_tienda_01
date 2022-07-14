@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import { View, FlatList} from "react-native";
+import { View, FlatList, SafeAreaView} from "react-native";
 import { styles } from "./styles";
 import { OrderItem } from "../../components/index";
 import { useDispatch, useSelector } from "react-redux";
-import { getOrders } from "../../store/actions/order.action";
-import { SafeAreaView} from 'react-native-safe-area-context'
+import { getOrders, deleteOrder } from "../../store/actions/order.action";
 
 
 
@@ -12,26 +11,23 @@ const OrdersScreen = () => {
 const dispatch = useDispatch();
 const orders = useSelector((state) => state.order.items);
 
- 
-useEffect(() => {
-
- dispatch(getOrders());
- 
-}, [])
+const onDeleteOrder = (id) =>{
+  dispatch(deleteOrder(id))
+ }
 
 
-
-
-  // const renderItem = (item) =>{(
+   // const renderItem = (item) =>{(
   //   <OrderItem item={item} onDelete={onDeleteOrder}/>
   // )}
   const renderItem = ({ item }) => (
     <OrderItem item={item} onDelete={onDeleteOrder} />
   );
 
-  const onDeleteOrder = () =>{
-    console.log('delete order')
-  }
+useEffect(() => {
+ dispatch(getOrders());
+}, [])
+
+
 
 
 

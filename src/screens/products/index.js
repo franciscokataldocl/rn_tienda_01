@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, FlatList} from 'react-native';
+import {View, FlatList, SafeAreaView} from 'react-native';
 import {styles} from './styles';
 import ProductItem from '../../components/product-item/index';
 import { useSelector, useDispatch } from 'react-redux';
@@ -43,6 +43,7 @@ const renderItem = ({item}) => (
 
 
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <View style={styles.container}>
         <FlatList
         data={filterProducts}
@@ -50,6 +51,7 @@ const renderItem = ({item}) => (
         keyExtractor={(item) => item.id}
         />
     </View>
+    </SafeAreaView>
   )
 }
 

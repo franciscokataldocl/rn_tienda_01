@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,FlatList} from 'react-native';
+import {View,FlatList, SafeAreaView} from 'react-native';
 import {styles} from './styles';
 import CategoryItem from '../../components/category-item/index';
 import {useSelector, useDispatch} from 'react-redux'
@@ -44,6 +44,7 @@ const onSelected = (item)=>{
   )
 
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <View style={styles.container}>
       <FlatList
       data={categories}
@@ -54,6 +55,7 @@ const onSelected = (item)=>{
         {/* <Text style={styles.title}>categories</Text> */}
         {/* <Button title="Productos" onPress={() => navigation.navigate('Products')}/> */}
     </View>
+    </SafeAreaView>
   )
 }
 

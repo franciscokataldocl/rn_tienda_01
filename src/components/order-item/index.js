@@ -16,7 +16,7 @@ const formatDate = time =>{
 
 const OrderItem = ({item, onDelete}) => {
 
-console.log(item)
+
 
   return (
     <View style={styles.container}>

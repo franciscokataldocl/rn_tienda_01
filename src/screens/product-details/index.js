@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Text, Button, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native';
 import { styles } from './styles';
-import { colors } from '../../constants/themes/colors';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem } from '../../store/actions/cart.actions';
@@ -15,6 +14,7 @@ const ProductDetailScreen = () => {
   };
 
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <View style={styles.container}>
      <View style={styles.card}>
      <Text style={styles.title}>{product.title}</Text>
@@ -36,6 +36,7 @@ const ProductDetailScreen = () => {
       </TouchableOpacity>
      </View>
     </View>
+    </SafeAreaView>
   );
 };
 
